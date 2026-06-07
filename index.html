@@ -9,7 +9,7 @@
 <body>
 <div class="header">
   <h1>🦞 每周荐股报告</h1>
-  <div class="subtitle">每周日 19:00 更新 · AI 自动生成</div>
+  <div class="subtitle">每周日 19:00 更新 · AI 自动生成 · 短线波段</div>
   <div class="search-box">
     <input type="text" id="searchInput" placeholder="搜索股票名称、日期、题材..." oninput="filterReports()">
   </div>
@@ -24,16 +24,12 @@
 </div>
 
 <script>
-// 加载搜索索引
 var searchIndex = [];
-
 function loadSearchIndex() {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', '/search_index.json', true);
   xhr.onload = function() {
-    if (xhr.status === 200) {
-      try { searchIndex = JSON.parse(xhr.responseText); } catch(e) {}
-    }
+    if (xhr.status === 200) { try { searchIndex = JSON.parse(xhr.responseText); } catch(e) {} }
   };
   xhr.send();
 }
@@ -51,7 +47,6 @@ function filterReports() {
   for (var i = 0; i < items.length; i++) {
     var a = items[i].getElementsByTagName('a')[0];
     if (!a) continue;
-
     var dateText = a.getElementsByClassName('date')[0];
     var dateStr = dateText ? dateText.textContent.trim() : '';
     var match = false;
@@ -59,29 +54,17 @@ function filterReports() {
     if (!searchByStock) {
       match = true;
     } else {
-      // 日期匹配
-      if (dateStr.toLowerCase().indexOf(filter) > -1) {
-        match = true;
-      }
-      // 搜索索引匹配
+      if (dateStr.toLowerCase().indexOf(filter) > -1) { match = true; }
       if (!match && searchIndex.length > 0) {
         for (var j = 0; j < searchIndex.length; j++) {
           if (searchIndex[j].date === dateStr) {
             var entry = searchIndex[j];
-            // 搜索股票名
             for (var k = 0; k < entry.stocks.length; k++) {
-              if (entry.stocks[k].toLowerCase().indexOf(filter) > -1) {
-                match = true;
-                break;
-              }
+              if (entry.stocks[k].toLowerCase().indexOf(filter) > -1) { match = true; break; }
             }
-            // 搜索关键词
             if (!match) {
               for (var k = 0; k < entry.keywords.length; k++) {
-                if (entry.keywords[k].toLowerCase().indexOf(filter) > -1) {
-                  match = true;
-                  break;
-                }
+                if (entry.keywords[k].toLowerCase().indexOf(filter) > -1) { match = true; break; }
               }
             }
             break;
@@ -89,11 +72,9 @@ function filterReports() {
         }
       }
     }
-
     items[i].style.display = match ? '' : 'none';
     if (match) visible++;
   }
-
   noResult.style.display = (visible === 0 && searchByStock) ? 'block' : 'none';
 }
 </script>
