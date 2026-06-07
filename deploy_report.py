@@ -14,10 +14,17 @@ def log(msg):
     print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}")
     sys.stdout.flush()
 
-def create_report_html(date_str, report_content):
-    """生成一份报告的HTML文件"""
+def create_report_html(date_str, report_content, stock_links=None):
+    """生成一份报告的HTML文件，股票名称自动加同花顺链接"""
     filename = f"{date_str}.html"
     filepath = os.path.join(REPORTS_DIR, filename)
+    
+    # 替换股票名称为可点击链接
+    if stock_links:
+        for name, code in stock_links.items():
+            old = f"{name}（{code}）"
+            new = f"<a href=\"https://stockpage.10jqka.com.cn/{code}/\" target=\"_blank\" style=\"color:#58a6ff;text-decoration:none;\">{name}</a>（{code}）"
+            report_content = report_content.replace(old, new)
     
     html = f"""<!DOCTYPE html>
 <html lang="zh-CN">
@@ -114,10 +121,10 @@ def update_search_index(date_str, stock_names, keywords):
         json.dump(index, f, ensure_ascii=False, indent=2)
     log(f"✅ 搜索索引已更新")
 
-def deploy(date_str, report_content, stock_names=None, keywords=None):
+def deploy(date_str, report_content, stock_names=None, keywords=None, stock_links=None):
     """完整部署流程"""
     os.makedirs(REPORTS_DIR, exist_ok=True)
-    create_report_html(date_str, report_content)
+    create_report_html(date_str, report_content, stock_links)
     update_index(date_str)
     if stock_names:
         update_search_index(date_str, stock_names, keywords or [])
