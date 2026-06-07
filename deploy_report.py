@@ -91,11 +91,36 @@ def push_to_github():
         log("❌ git push超时")
         return False
 
-def deploy(date_str, report_content):
+def update_search_index(date_str, stock_names, keywords):
+    """更新搜索索引"""
+    import json
+    index_file = os.path.join(REPO_DIR, "search_index.json")
+    index = []
+    if os.path.exists(index_file):
+        try:
+            with open(index_file, "r", encoding="utf-8") as f:
+                index = json.load(f)
+        except:
+            index = []
+    # 检查是否已有当天记录
+    for entry in index:
+        if entry["date"] == date_str:
+            entry["stocks"] = stock_names
+            entry["keywords"] = keywords
+            break
+    else:
+        index.append({"date": date_str, "stocks": stock_names, "keywords": keywords})
+    with open(index_file, "w", encoding="utf-8") as f:
+        json.dump(index, f, ensure_ascii=False, indent=2)
+    log(f"✅ 搜索索引已更新")
+
+def deploy(date_str, report_content, stock_names=None, keywords=None):
     """完整部署流程"""
     os.makedirs(REPORTS_DIR, exist_ok=True)
     create_report_html(date_str, report_content)
     update_index(date_str)
+    if stock_names:
+        update_search_index(date_str, stock_names, keywords or [])
     success = push_to_github()
     if success:
         log(f"🎉 部署完成！https://github.com/wsyy002/stock-reports")
