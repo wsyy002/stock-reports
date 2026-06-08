@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>⚔️ 各战法持仓 | 麻辣小龙虾</title>
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+/* 战法持仓页专用样式 */
+.strategy-card {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.strategy-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #30363d;
+}
+.strategy-info h2 {
+    margin: 0 0 4px 0;
+    font-size: 18px;
+    color: #e94560;
+}
+.strategy-info .desc {
+    margin: 0;
+    color: #888;
+    font-size: 12px;
+}
+.strategy-pnl {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.pnl-item {
+    text-align: center;
+}
+.pnl-label {
+    display: block;
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 4px;
+}
+.pnl-value {
+    font-size: 18px;
+    font-weight: 700;
+}
+.pnl-value.total {
+    font-size: 24px;
+}
+.up { color: #f85149; }
+.down { color: #3fb950; }
+.holdings-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+.holdings-table th {
+    text-align: left;
+    padding: 10px 8px;
+    border-bottom: 2px solid #30363d;
+    color: #888;
+    font-weight: 500;
+    font-size: 11px;
+}
+.holdings-table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #21262d;
+}
+.holdings-table tr:hover td {
+    background: rgba(255,255,255,0.03);
+}
+.holdings-table a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+.holdings-table a:hover {
+    text-decoration: underline;
+}
+.holdings-table small {
+    color: #888;
+    font-size: 11px;
+}
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #555;
+}
+.summary-bar {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: center;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 20px;
+}
+.summary-item {
+    text-align: center;
+}
+.summary-item label {
+    display: block;
+    font-size: 11px;
+    color: #888;
+    margin-bottom: 4px;
+}
+.summary-item .value {
+    font-size: 22px;
+    font-weight: 700;
+}
+@media (max-width: 640px) {
+    .strategy-header {
+        flex-direction: column;
+    }
+    .strategy-pnl {
+        gap: 12px;
+    }
+    .holdings-table {
+        font-size: 12px;
+    }
+    .holdings-table th, .holdings-table td {
+        padding: 6px 4px;
+    }
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <a href="/" style="color:#58a6ff;text-decoration:none;font-size:14px;">← 返回首页</a>
+  <h1>⚔️ 各战法持仓</h1>
+  <div class="subtitle">最后更新: 2026-06-08 09:48</div>
+</div>
+
+<div class="report-content">
+
+<div class="summary-bar">
+    <div class="summary-item">
+        <label>总资产</label>
+        <div class="value">¥+203,900.59</div>
+    </div>
+    <div class="summary-item">
+        <label>总盈亏</label>
+        <div class="value up">¥+5,535.20</div>
+    </div>
+    <div class="summary-item">
+        <label>可用资金</label>
+        <div class="value">¥+1,958.59</div>
+    </div>
+    <div class="summary-item">
+        <label>持仓市值</label>
+        <div class="value">¥+201,942.00</div>
+    </div>
+</div>
+
+
+<div class="strategy-card">
+    <div class="strategy-header">
+        <div class="strategy-info">
+            <h2>N字战法</h2>
+            <p class="desc">N形上涨结构：第一波拉升→缩量回调→二次放量启动</p>
+        </div>
+        <div class="strategy-pnl">
+            <div class="pnl-item">
+                <span class="pnl-label">浮动盈亏</span>
+                <span class="pnl-value up">¥+1,003.60</span>
+            </div>
+            <div class="pnl-item">
+                <span class="pnl-label">已实现盈亏</span>
+                <span class="pnl-value up">¥+0.00</span>
+            </div>
+            <div class="pnl-item">
+                <span class="pnl-label">合计盈亏</span>
+                <span class="pnl-value total up">¥+1,003.60</span>
+            </div>
+        </div>
+    </div>
+    <table class="holdings-table">
+        <thead>
+            <tr>
+                <th>股票</th><th>入场价</th><th>现价</th><th>数量</th>
+                <th>浮动盈亏</th><th>盈亏%</th><th>仓位占比</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="https://stockpage.10jqka.com.cn/601137/" target="_blank">博威合金</a><br><small>601137</small></td>
+                <td>¥+25.02</td>
+                <td>¥+23.81</td>
+                <td>4600股</td>
+                <td class="down">¥-5,108.68</td>
+                <td class="down">-4.46%</td>
+                <td>54.2%</td>
+            </tr>
+            <tr>
+                <td><a href="https://stockpage.10jqka.com.cn/300319/" target="_blank">麦捷科技</a><br><small>300319</small></td>
+                <td>¥+22.84</td>
+                <td>¥+24.32</td>
+                <td>3800股</td>
+                <td class="up">¥+6,115.40</td>
+                <td class="up">7.09%</td>
+                <td>45.8%</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="strategy-card">
+    <div class="strategy-header">
+        <div class="strategy-info">
+            <h2>系统A(盘中监控)</h2>
+            <p class="desc">盘中自动监控 + 突破买入 + 止损止盈</p>
+        </div>
+        <div class="strategy-pnl">
+            <div class="pnl-item">
+                <span class="pnl-label">浮动盈亏</span>
+                <span class="pnl-value up">¥+0.00</span>
+            </div>
+            <div class="pnl-item">
+                <span class="pnl-label">已实现盈亏</span>
+                <span class="pnl-value up">¥+4,531.60</span>
+            </div>
+            <div class="pnl-item">
+                <span class="pnl-label">合计盈亏</span>
+                <span class="pnl-value total up">¥+4,531.60</span>
+            </div>
+        </div>
+    </div><div class="empty-state">暂无持仓</div>
+</div>
+
+</div>
+
+<div class="footer">
+  <p>由 🦞 麻辣小龙虾 自动生成 | 数据来源: 同花顺模拟炒股</p>
+  <p>投资有风险，入市需谨慎。本页面仅供参考，不构成投资建议。</p>
+</div>
+</body>
+</html>
