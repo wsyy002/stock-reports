@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🦞 每周荐股报告 | 2026年6月14日</title>
+<style>
+:root {
+  --bg: #0f0f1a;
+  --card: #1a1a2e;
+  --card2: #16213e;
+  --accent: #e94560;
+  --green: #00c853;
+  --gold: #ffd700;
+  --text: #e0e0e0;
+  --muted: #8892b0;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; background: var(--bg); color: var(--text); padding: 20px; }
+.container { max-width: 900px; margin: 0 auto; }
+.header { text-align: center; padding: 30px 0; border-bottom: 1px solid #2a2a4a; margin-bottom: 30px; }
+.header h1 { font-size: 28px; color: var(--gold); }
+.header h1 span { color: var(--accent); }
+.header .sub { color: var(--muted); font-size: 14px; margin-top: 8px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.tag { display: inline-block; padding: 2px 10px; border-radius: 4px; font-size: 12px; font-weight: 600; }
+.tag-bull { background: rgba(0,200,83,0.15); color: var(--green); }
+.tag-bear { background: rgba(233,69,96,0.15); color: var(--accent); }
+.tag-neutral { background: rgba(255,215,0,0.15); color: var(--gold); }
+
+.section { margin-bottom: 30px; }
+.section h2 { font-size: 18px; margin-bottom: 15px; padding-left: 12px; border-left: 3px solid var(--accent); }
+
+.market-card { background: var(--card); border-radius: 12px; padding: 20px; margin-bottom: 20px; }
+.market-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px; }
+.market-item { background: var(--card2); border-radius: 8px; padding: 12px; text-align: center; }
+.market-item .name { font-size: 13px; color: var(--muted); }
+.market-item .value { font-size: 20px; font-weight: 700; margin-top: 4px; }
+.market-item .change { font-size: 13px; margin-top: 2px; }
+
+.stock-card { background: var(--card); border-radius: 12px; padding: 20px; margin-bottom: 20px; border-left: 4px solid var(--accent); }
+.stock-card .stock-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; flex-wrap: wrap; }
+.stock-card .stock-name { font-size: 20px; font-weight: 700; }
+.stock-card .stock-code { color: var(--muted); font-size: 14px; margin-left: 8px; }
+.stock-card .stock-price { text-align: right; }
+.stock-card .stock-price .price { font-size: 22px; font-weight: 700; }
+.stock-card .stock-price .chg { font-size: 14px; }
+.stock-card .theme { display: inline-block; background: rgba(233,69,96,0.15); color: var(--accent); padding: 2px 10px; border-radius: 4px; font-size: 12px; margin-bottom: 10px; }
+.stock-card .detail { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 8px; margin: 12px 0; }
+.stock-card .detail-item { background: var(--card2); border-radius: 6px; padding: 8px 10px; }
+.stock-card .detail-item .label { font-size: 11px; color: var(--muted); }
+.stock-card .detail-item .val { font-size: 15px; font-weight: 600; }
+.stock-card .logic { font-size: 14px; line-height: 1.7; color: #ccc; }
+.stock-card .plan { background: var(--card2); border-radius: 8px; padding: 12px; margin-top: 10px; font-size: 13px; }
+.stock-card .plan strong { color: var(--gold); }
+
+.risk-box { background: rgba(233,69,96,0.1); border: 1px solid rgba(233,69,96,0.3); border-radius: 8px; padding: 15px; margin: 20px 0; }
+.risk-box h3 { color: var(--accent); font-size: 14px; margin-bottom: 8px; }
+.risk-box li { font-size: 13px; line-height: 1.6; margin-left: 16px; color: #ccc; }
+
+.footer { text-align: center; color: var(--muted); font-size: 12px; padding: 20px 0; border-top: 1px solid #2a2a4a; margin-top: 30px; }
+.footer strong { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <h1>🦞 <span>麻辣小龙虾</span> · 每周荐股报告</h1>
+  <div class="sub">
+    <span>📅 2026年6月14日（周日）</span>
+    <span>📌 短线波段版</span>
+    <span>⏱ 持有周期：1天~2周</span>
+  </div>
+</div>
+
+<div class="section">
+  <h2>📊 大盘简评</h2>
+  <div class="market-card">
+    <p style="line-height:1.8;font-size:14px;">
+      <strong>上周回顾</strong>：A股缩量震荡，全周成交13.95万亿创近5周新低。上证4000点失而复得，两融资金净卖出逾330亿。<br>
+      <strong>周五强势反弹</strong>：6月12日四大指数集体高开，超4500只个股上涨，科创综指高开2.71%。<br>
+      <strong>外部环境</strong>：SEMI公布Q1全球半导体设备销售额365.5亿美元创单季新高；华为HDC开发者大会周末召开（鸿蒙+AI+算力）；工信部发布「AI+信息通信」创新发展意见；DeepSeek融资70亿美元估值590亿。<br>
+      <strong>下周展望</strong>：周初受半导体高位获利回吐影响可能继续震荡，但6月15日指数调样生效（关注调入个股资金流入），科技主线中期趋势不改。市场进入"拉锯蓄力再突破"阶段。
+    </p>
+    <div class="market-grid">
+      <div class="market-item">
+        <div class="name">仓位建议</div>
+        <div class="value" style="color:var(--gold);">5~6成</div>
+        <div class="change" style="color:var(--muted);">中性偏积极</div>
+      </div>
+      <div class="market-item">
+        <div class="name">大盘方向</div>
+        <div class="value" style="color:var(--green);">震荡偏多</div>
+        <div class="change" style="color:var(--muted);">上证4000点支撑</div>
+      </div>
+      <div class="market-item">
+        <div class="name">重点关注</div>
+        <div class="value" style="color:var(--accent);">科技线</div>
+        <div class="change" style="color:var(--muted);">半导体/光伏/算力</div>
+      </div>
+      <div class="market-item">
+        <div class="name">风险提示</div>
+        <div class="value" style="color:#ff6b6b;">高波动</div>
+        <div class="change" style="color:var(--muted);">控制仓位不追高</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>🎯 下周短线推荐（4只）</h2>
+  
+  <!-- 股票1：捷佳伟创 -->
+  <div class="stock-card" style="border-left-color: #00c853;">
+    <div class="stock-header">
+      <div>
+        <span class="stock-name">捷佳伟创</span>
+        <span class="stock-code">300724</span>
+        <div class="theme" style="background:rgba(0,200,83,0.15);color:#00c853;">☀️ 光伏设备</div>
+      </div>
+      <div class="stock-price">
+        <div class="price">70.15</div>
+        <div class="chg" style="color:var(--green);">+1.74%</div>
+      </div>
+    </div>
+    <div class="detail">
+      <div class="detail-item"><div class="label">PE(动态)</div><div class="val">11.21</div></div>
+      <div class="detail-item"><div class="label">换手率</div><div class="val">4.11%</div></div>
+      <div class="detail-item"><div class="label">量比</div><div class="val">1.06</div></div>
+      <div class="detail-item"><div class="label">52周高/低</div><div class="val">151 / 49.6</div></div>
+      <div class="detail-item"><div class="label">流通市值</div><div class="val">202亿</div></div>
+      <div class="detail-item"><div class="label">市净率</div><div class="val">1.85</div></div>
+    </div>
+    <div class="logic">
+      <strong>📌 短线逻辑</strong>：光伏设备龙头，周五放量上涨站上70元关口。PE仅11倍，在光伏板块中极度低估（板块平均PE 25+）。公司受益于光伏行业底部回暖+N型电池扩产需求。宁德时代钠离子电池产线投产带动新能源板块情绪回暖，光伏设备率先受益。目前股价距52周高点151仍有超50%空间，中短期反弹动力充足。
+    </div>
+    <div class="plan">
+      <strong>📋 交易计划：</strong><br>
+      🔹 <strong>买入区间：</strong> 67.50 ~ 71.50（周五收盘70.15，±3%范围）<br>
+      🔹 <strong>目标一：</strong> 78.00（+11%），突破前高72.48加仓<br>
+      🔹 <strong>目标二：</strong> 85.00（+21%）<br>
+      🔹 <strong>止损：</strong> 65.00（-7.3%），跌破前低支撑位离场<br>
+      🔹 <strong>持仓周期：</strong> 3~10个交易日
+    </div>
+  </div>
+
+  <!-- 股票2：沃尔核材 -->
+  <div class="stock-card" style="border-left-color: #2196F3;">
+    <div class="stock-header">
+      <div>
+        <span class="stock-name">沃尔核材</span>
+        <span class="stock-code">002130</span>
+        <div class="theme" style="background:rgba(33,150,243,0.15);color:#64b5f6;">⚡ 核电缆+新能源材料</div>
+      </div>
+      <div class="stock-price">
+        <div class="price">19.19</div>
+        <div class="chg" style="color:var(--green);">+2.84%</div>
+      </div>
+    </div>
+    <div class="detail">
+      <div class="detail-item"><div class="label">PE(动态)</div><div class="val">23.88</div></div>
+      <div class="detail-item"><div class="label">换手率</div><div class="val">4.03%</div></div>
+      <div class="detail-item"><div class="label">量比</div><div class="val">1.10</div></div>
+      <div class="detail-item"><div class="label">52周高/低</div><div class="val">34.97 / 18.60</div></div>
+      <div class="detail-item"><div class="label">流通市值</div><div class="val">220亿</div></div>
+      <div class="detail-item"><div class="label">市净率</div><div class="val">2.94</div></div>
+    </div>
+    <div class="logic">
+      <strong>📌 短线逻辑</strong>：核电+新能源双主线受益。周五放量+2.84%领涨板块，量比1.10配合良好。PE 24估值合理，核电审批加速+特高压建设催动电缆需求增长。公司主营核电站用电缆、新能源充电桩电缆，受益于国内核电装机目标上调和AI算力中心电力配套需求。目前股价处于52周低位，有补涨空间。
+    </div>
+    <div class="plan">
+      <strong>📋 交易计划：</strong><br>
+      🔹 <strong>买入区间：</strong> 18.50 ~ 19.60（周五收盘19.19，±3%范围）<br>
+      🔹 <strong>目标一：</strong> 21.50（+12%），突破20元整数关口确认<br>
+      🔹 <strong>目标二：</strong> 23.50（+22%）<br>
+      🔹 <strong>止损：</strong> 17.80（-7.2%），跌破前低18.60减仓<br>
+      🔹 <strong>持仓周期：</strong> 5~12个交易日
+    </div>
+  </div>
+
+  <!-- 股票3：工业富联 -->
+  <div class="stock-card" style="border-left-color: #ffd700;">
+    <div class="stock-header">
+      <div>
+        <span class="stock-name">工业富联</span>
+        <span class="stock-code">601138</span>
+        <div class="theme" style="background:rgba(255,215,0,0.15);color:#ffd700;">🖥️ AI算力</div>
+      </div>
+      <div class="stock-price">
+        <div class="price">70.13</div>
+        <div class="chg" style="color:var(--green);">+0.88%</div>
+      </div>
+    </div>
+    <div class="detail">
+      <div class="detail-item"><div class="label">PE(动态)</div><div class="val">34.24</div></div>
+      <div class="detail-item"><div class="label">换手率</div><div class="val">0.74%</div></div>
+      <div class="detail-item"><div class="label">量比</div><div class="val">0.77</div></div>
+      <div class="detail-item"><div class="label">52周高/低</div><div class="val">84.95 / 19.01</div></div>
+      <div class="detail-item"><div class="label">流通市值</div><div class="val">1.39万亿</div></div>
+      <div class="detail-item"><div class="label">市净率</div><div class="val">7.90</div></div>
+    </div>
+    <div class="logic">
+      <strong>📌 短线逻辑</strong>：AI服务器龙头，全球算力基建核心标的。上周回调至70元附近企稳，周五高开震荡收+0.88%。受益于英伟达新AI芯片需求爆发+DeepSeek融资70亿催化AI产业链。工信部「AI+信息通信」政策利好算力基础设施。大市值蓝筹攻守兼备，适合稳健型波段操作。
+    </div>
+    <div class="plan">
+      <strong>📋 交易计划：</strong><br>
+      🔹 <strong>买入区间：</strong> 68.00 ~ 71.50（周五收盘70.13，±3%范围）<br>
+      🔹 <strong>目标一：</strong> 76.00（+8%），前高附近可做T<br>
+      🔹 <strong>目标二：</strong> 80.00（+14%）<br>
+      🔹 <strong>止损：</strong> 65.50（-6.6%），跌破MA60均线离场<br>
+      🔹 <strong>持仓周期：</strong> 5~14个交易日
+    </div>
+  </div>
+
+  <!-- 股票4：阳光电源 -->
+  <div class="stock-card" style="border-left-color: #9c27b0;">
+    <div class="stock-header">
+      <div>
+        <span class="stock-name">阳光电源</span>
+        <span class="stock-code">300274</span>
+        <div class="theme" style="background:rgba(156,39,176,0.15);color:#ce93d8;">🔋 光伏逆变器+储能</div>
+      </div>
+      <div class="stock-price">
+        <div class="price">148.76</div>
+        <div class="chg" style="color:var(--green);">+1.37%</div>
+      </div>
+    </div>
+    <div class="detail">
+      <div class="detail-item"><div class="label">PE(动态)</div><div class="val">25.86</div></div>
+      <div class="detail-item"><div class="label">换手率</div><div class="val">5.44%</div></div>
+      <div class="detail-item"><div class="label">量比</div><div class="val">1.34</div></div>
+      <div class="detail-item"><div class="label">52周高/低</div><div class="val">209 / 60.44</div></div>
+      <div class="detail-item"><div class="label">流通市值</div><div class="val">2362亿</div></div>
+      <div class="detail-item"><div class="label">市净率</div><div class="val">6.53</div></div>
+    </div>
+    <div class="logic">
+      <strong>📌 短线逻辑</strong>：全球逆变器龙头，储能业务高速增长。周五放量+1.37%（量比1.34），盘中摸高157明显有大资金介入。宁德时代钠离子电池量产（9月首批交付）催化储能板块情绪升温。5月新能源汽车产销同比+22.4%/14.4%，渗透率56.9%，利好新能源全产业链。PE 26倍，成长性匹配度高。
+    </div>
+    <div class="plan">
+      <strong>📋 交易计划：</strong><br>
+      🔹 <strong>买入区间：</strong> 143 ~ 152（周五收盘148.76，±3%范围）<br>
+      🔹 <strong>目标一：</strong> 165（+11%），突破157前高确认<br>
+      🔹 <strong>目标二：</strong> 180（+21%）<br>
+      🔹 <strong>止损：</strong> 138（-7.2%），破20日均线离场<br>
+      🔹 <strong>持仓周期：</strong> 3~10个交易日
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2>⚠️ 风险提示</h2>
+  <div class="risk-box">
+    <h3>本周需要关注的风险因素</h3>
+    <ul>
+      <li>半导体板块高位获利回吐压力大，上周五晶方科技(-7%)、通富微电(-4.8%)等大幅回调，若周初继续杀跌可能拖累科技整体情绪</li>
+      <li>两融资金上周净卖出330亿，杠杆资金离场信号需重视</li>
+      <li>国际地缘风险（伊朗局势、霍尔木兹海峡），可能影响油价和全球风险偏好</li>
+      <li>6月15日指数调样生效日前后，调出个股有被动卖出压力</li>
+      <li>大盘成交缩量（创5周新低），缺乏增量资金可能限制反弹高度</li>
+    </ul>
+  </div>
+</div>
+
+<div class="footer">
+  <p>🦞 <strong>麻辣小龙虾</strong> · 每周荐股报告 · 2026年6月14日</p>
+  <p>⚠️ 本报告仅供参考，不构成投资建议。入市有风险，投资需谨慎。</p>
+  <p>数据来源：东方财富 · stock-sdk | 生成时间：2026-06-14 19:42</p>
+</div>
+
+</div>
+</body>
+</html>
