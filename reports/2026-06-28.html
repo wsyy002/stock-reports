@@ -4,81 +4,129 @@
 <style>
 body{font-family:-apple-system,sans-serif;max-width:800px;margin:0 auto;padding:20px;background:#0f0f1a;color:#e0e0e0;line-height:1.6}
 h1{color:#ff6b35;border-bottom:2px solid #ff6b35;padding-bottom:10px}
-h2{color:#ff8c5a}
+h2{color:#ff8c5a;margin-top:30px}
 .badge{display:inline-block;padding:2px 10px;border-radius:4px;font-size:13px;font-weight:700;margin-right:8px}
 .badge-a{background:#ff6b35;color:#fff}
 .badge-b{background:#4ecdc4;color:#fff}
 .stock-card{background:#1a1a2e;border-radius:10px;padding:18px;margin:15px 0;border-left:4px solid #ff6b35}
 .stock-card.b-class{border-left-color:#4ecdc4}
-.data-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0;font-size:14px}
+.meta{font-size:13px;color:#999;margin:5px 0}
+.data-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0;font-size:14px;color:#fff}
 .data-grid .label{color:#999}
-.data-grid .value{text-align:right;color:#fff}
 .plan{background:#16213e;border-radius:8px;padding:12px;margin:10px 0;font-size:14px}
+.confirm-box{background:#1a2e1a;border-left:4px solid #4ecdc4;border-radius:8px;padding:12px;margin:10px 0;font-size:13px}
+.exit-box{background:#2e1a1a;border-left:4px solid #ff6b6b;border-radius:8px;padding:12px;margin:10px 0;font-size:13px}
 .summary{background:#1a1a2e;border-radius:10px;padding:15px;margin:15px 0}
 .footer{text-align:center;color:#666;font-size:12px;margin-top:40px}
 table{width:100%;border-collapse:collapse;margin:10px 0}
 td,th{padding:8px;text-align:left;border-bottom:1px solid #333}
 </style></head><body>
-<h1>🦞 每周荐股报告</h1>
+<h1>🦞 每周荐股报告 (v2.0 自动化)</h1>
 <p style="color:#999">2026-06-28 | 凤凰系统自动生成</p>
 <div class="summary">
 <h3>📊 大盘环境</h3>
-<p>市场状态：BEAR (43.0分)</p>
-<p style="color:#ff8c5a;font-weight:700">总仓位：2~3成 | 单股≤1.5成</p>
+<p><b>市场状态：BEAR (43.0分)</b></p>
+<p>（周日20:00更新）美股存储概念全线重挫，AI算力资本开支逻辑未变。陆家嘴论坛强调金融资源倾斜硬科技。半年末基金调仓加速，高低切换明显。</p>
+<p style="color:#ff8c5a;font-weight:700">总仓位：2~3成 | 单股≤1.5成 | 防守为主</p>
 </div>
-<h2>📍 本周推荐</h2>
+<h2>📍 本周推荐组合（A类+B类共5只）</h2>
 
-<div class="stock-card ">
+<div class="stock-card">
 <h3><span class="badge badge-a">A类·回调低吸</span>盛视科技 (002990)</h3>
 <div class="meta"><span>📁 BULL池</span><span>🏷️ 综合75.9 ML=57.2</span></div>
 <div class="data-grid">
 <span class="label">现价</span><span class="value">75.2元</span>
-<span class="label">成交额</span><span class="value">20亿</span>
-<span class="label">涨跌幅</span><span class="value">+3.58%</span></div>
-<div class="plan"><div class="plan-item"><b>买入区间</b>：参考实时行情</div>
-<div class="plan-item"><b>止损</b>：-7% | <b>目标</b>：+8~12%</div>
-<div class="plan-item"><b>仓位</b>：1.5成</div></div></div>
-<div class="stock-card ">
+<span class="label">成交额</span><span class="value">20亿 ✅</span>
+<span class="label">换手率/涨跌幅</span><span class="value">+3.58%</span>
+<span class="label">近期高点</span><span class="value">0元</span>
+<span class="label">已回调</span><span class="value">0%</span>
+<span class="label">综合评分</span><span class="value">75.9</span>
+</div>
+<div class="confirm-box"><h4>✅ 回调确认条件</h4>- 缩量回调（抛压衰竭）| 支撑未破 | 题材没退潮<br>- ⚠️ 不满足→放弃</div>
+<div class="plan">
+<div class="plan-item"><b>买入区间</b>：参考实时行情，当前价下方3~5%</div>
+<div class="plan-item"><b>止损</b>：约-7% | <b>目标</b>：+8~12%</div>
+<div class="plan-item"><b>持有</b>：3~5天 | <b>仓位</b>：1.5成</div>
+</div>
+<div class="exit-box"><h4>🚪 离场规则</h4>- 止损-7%必须出 | 5天后浮盈>3%卖一半 | 不赚不赔清仓 | 板块利空提前止损</div>
+</div>
+<div class="stock-card">
 <h3><span class="badge badge-a">A类·回调低吸</span>艾华集团 (603989)</h3>
 <div class="meta"><span>📁 BULL池</span><span>🏷️ 综合75.4 ML=52.4</span></div>
 <div class="data-grid">
 <span class="label">现价</span><span class="value">56.0元</span>
-<span class="label">成交额</span><span class="value">21亿</span>
-<span class="label">涨跌幅</span><span class="value">+4.19%</span></div>
-<div class="plan"><div class="plan-item"><b>买入区间</b>：参考实时行情</div>
-<div class="plan-item"><b>止损</b>：-7% | <b>目标</b>：+8~12%</div>
-<div class="plan-item"><b>仓位</b>：1.5成</div></div></div>
-<div class="stock-card ">
+<span class="label">成交额</span><span class="value">21亿 ✅</span>
+<span class="label">换手率/涨跌幅</span><span class="value">+4.19%</span>
+<span class="label">近期高点</span><span class="value">0元</span>
+<span class="label">已回调</span><span class="value">0%</span>
+<span class="label">综合评分</span><span class="value">75.4</span>
+</div>
+<div class="confirm-box"><h4>✅ 回调确认条件</h4>- 缩量回调（抛压衰竭）| 支撑未破 | 题材没退潮<br>- ⚠️ 不满足→放弃</div>
+<div class="plan">
+<div class="plan-item"><b>买入区间</b>：参考实时行情，当前价下方3~5%</div>
+<div class="plan-item"><b>止损</b>：约-7% | <b>目标</b>：+8~12%</div>
+<div class="plan-item"><b>持有</b>：3~5天 | <b>仓位</b>：1.5成</div>
+</div>
+<div class="exit-box"><h4>🚪 离场规则</h4>- 止损-7%必须出 | 5天后浮盈>3%卖一半 | 不赚不赔清仓 | 板块利空提前止损</div>
+</div>
+<div class="stock-card">
 <h3><span class="badge badge-a">A类·回调低吸</span>创元科技 (000551)</h3>
 <div class="meta"><span>📁 BULL池</span><span>🏷️ 综合73.6 ML=50</span></div>
 <div class="data-grid">
 <span class="label">现价</span><span class="value">18.25元</span>
-<span class="label">成交额</span><span class="value">12亿</span>
-<span class="label">涨跌幅</span><span class="value">+6.23%</span></div>
-<div class="plan"><div class="plan-item"><b>买入区间</b>：参考实时行情</div>
-<div class="plan-item"><b>止损</b>：-7% | <b>目标</b>：+8~12%</div>
-<div class="plan-item"><b>仓位</b>：1.5成</div></div></div>
-<div class="stock-card ">
-<h3><span class="badge badge-a">A类·回调低吸</span>华源控股 (002787)</h3>
-<div class="meta"><span>📁 BULL池</span><span>🏷️ 综合73.2 ML=50</span></div>
+<span class="label">成交额</span><span class="value">12亿 ✅</span>
+<span class="label">换手率/涨跌幅</span><span class="value">+6.23%</span>
+<span class="label">近期高点</span><span class="value">0元</span>
+<span class="label">已回调</span><span class="value">0%</span>
+<span class="label">综合评分</span><span class="value">73.6</span>
+</div>
+<div class="confirm-box"><h4>✅ 回调确认条件</h4>- 缩量回调（抛压衰竭）| 支撑未破 | 题材没退潮<br>- ⚠️ 不满足→放弃</div>
+<div class="plan">
+<div class="plan-item"><b>买入区间</b>：参考实时行情，当前价下方3~5%</div>
+<div class="plan-item"><b>止损</b>：约-7% | <b>目标</b>：+8~12%</div>
+<div class="plan-item"><b>持有</b>：3~5天 | <b>仓位</b>：1.5成</div>
+</div>
+<div class="exit-box"><h4>🚪 离场规则</h4>- 止损-7%必须出 | 5天后浮盈>3%卖一半 | 不赚不赔清仓 | 板块利空提前止损</div>
+</div>
+<div class="stock-card b-class">
+<h3><span class="badge badge-b">B类·支撑企稳</span>华兰股份 (301093)</h3>
+<div class="meta"><span>📁 BULL池</span><span>🏷️ 综合75.4 ML=100.0</span></div>
 <div class="data-grid">
-<span class="label">现价</span><span class="value">32.47元</span>
-<span class="label">成交额</span><span class="value">13亿</span>
-<span class="label">涨跌幅</span><span class="value">+7.02%</span></div>
-<div class="plan"><div class="plan-item"><b>买入区间</b>：参考实时行情</div>
-<div class="plan-item"><b>止损</b>：-7% | <b>目标</b>：+8~12%</div>
-<div class="plan-item"><b>仓位</b>：1.5成</div></div></div>
-<div class="stock-card ">
-<h3><span class="badge badge-a">A类·回调低吸</span>宁波中百 (600857)</h3>
-<div class="meta"><span>📁 BULL池</span><span>🏷️ 综合73.0 ML=50</span></div>
+<span class="label">现价</span><span class="value">124.69元</span>
+<span class="label">成交额</span><span class="value">5亿 ✅</span>
+<span class="label">换手率/涨跌幅</span><span class="value">+1.28%</span>
+<span class="label">近期高点</span><span class="value">0元</span>
+<span class="label">已回调</span><span class="value">0%</span>
+<span class="label">综合评分</span><span class="value">75.4</span>
+</div>
+<div class="confirm-box"><h4>✅ 企稳确认</h4>- 支撑位企稳 | 缩量止跌<br>- ⚠️ 跌破支撑→放弃</div>
+<div class="plan">
+<div class="plan-item"><b>买入区间</b>：参考实时行情，当前价下方3~5%</div>
+<div class="plan-item"><b>止损</b>：约-7% | <b>目标</b>：+8~12%</div>
+<div class="plan-item"><b>持有</b>：3~5天 | <b>仓位</b>：1.5成</div>
+</div>
+<div class="exit-box"><h4>🚪 离场规则</h4>- 止损-7%必须出 | 5天后浮盈>3%卖一半 | 不赚不赔清仓 | 板块利空提前止损</div>
+</div>
+<div class="stock-card b-class">
+<h3><span class="badge badge-b">B类·支撑企稳</span>金利华电 (300069)</h3>
+<div class="meta"><span>📁 BULL池</span><span>🏷️ 综合59.5 ML=80.6</span></div>
 <div class="data-grid">
-<span class="label">现价</span><span class="value">17.87元</span>
-<span class="label">成交额</span><span class="value">5亿</span>
-<span class="label">涨跌幅</span><span class="value">+2.94%</span></div>
-<div class="plan"><div class="plan-item"><b>买入区间</b>：参考实时行情</div>
-<div class="plan-item"><b>止损</b>：-7% | <b>目标</b>：+8~12%</div>
-<div class="plan-item"><b>仓位</b>：1.5成</div></div></div>
+<span class="label">现价</span><span class="value">32.11元</span>
+<span class="label">成交额</span><span class="value">3亿</span>
+<span class="label">换手率/涨跌幅</span><span class="value">+1.23%</span>
+<span class="label">近期高点</span><span class="value">0元</span>
+<span class="label">已回调</span><span class="value">0%</span>
+<span class="label">综合评分</span><span class="value">59.5</span>
+</div>
+<div class="confirm-box"><h4>✅ 企稳确认</h4>- 支撑位企稳 | 缩量止跌<br>- ⚠️ 跌破支撑→放弃</div>
+<div class="plan">
+<div class="plan-item"><b>买入区间</b>：参考实时行情，当前价下方3~5%</div>
+<div class="plan-item"><b>止损</b>：约-7% | <b>目标</b>：+8~12%</div>
+<div class="plan-item"><b>持有</b>：3~5天 | <b>仓位</b>：1.5成</div>
+</div>
+<div class="exit-box"><h4>🚪 离场规则</h4>- 止损-7%必须出 | 5天后浮盈>3%卖一半 | 不赚不赔清仓 | 板块利空提前止损</div>
+</div>
 <h2>📈 ML模型预测 Top5</h2>
-<table><tr><th>代码</th><th>名称</th><th>预测涨幅</th><th>ML分</th></tr><tr><td>301093</td><td>华兰股份</td><td>+9.14%</td><td>100.0</td></tr><tr><td>001270</td><td>铖昌科技</td><td>+8.29%</td><td>92.9</td></tr><tr><td>300069</td><td>金利华电</td><td>+6.41%</td><td>77.3</td></tr><tr><td>002990</td><td>盛视科技</td><td>+3.12%</td><td>49.8</td></tr><tr><td>605499</td><td>东鹏饮料</td><td>+2.61%</td><td>45.6</td></tr></table>
-<p class="footer">由 🦞 麻辣小龙虾·Phoenix量化系统驱动 | 投资有风险，入市需谨慎</p>
+<table><tr><th>代码</th><th>名称</th><th>预测涨幅</th><th>ML分</th></tr><tr><td>301093</td><td>华兰股份</td><td>+9.1%</td><td>100.0</td></tr><tr><td>001270</td><td>铖昌科技</td><td>+8.3%</td><td>92.9</td></tr><tr><td>300069</td><td>金利华电</td><td>+6.4%</td><td>77.3</td></tr><tr><td>002990</td><td>盛视科技</td><td>+3.1%</td><td>49.8</td></tr><tr><td>605499</td><td>东鹏饮料</td><td>+2.6%</td><td>45.6</td></tr></table>
+<p class="footer">由 🦞 麻辣小龙虾·Phoenix量化系统驱动 | 数据: Phoenix候选池<br>投资有风险，入市需谨慎。本报告仅供参考，不构成投资建议。</p>
 </body></html>
