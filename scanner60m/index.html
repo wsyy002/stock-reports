@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>📡 60分钟K线扫描 | 麻辣小龙虾</title>
+<link rel="stylesheet" href="/assets/style.css">
+<style>
+body { background: #0d1117; color: #c9d1d9; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; margin: 0; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.header { text-align: center; padding: 30px 0 20px; }
+.header h1 { margin: 0; font-size: 28px; color: #e94560; }
+.header .subtitle { color: #888; font-size: 13px; margin-top: 6px; }
+.section { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin-bottom: 20px; }
+.section h2 { margin: 0 0 16px 0; font-size: 18px; color: #e94560; border-bottom: 1px solid #30363d; padding-bottom: 12px; }
+.summary-grid { display: flex; gap: 16px; flex-wrap: wrap; }
+.summary-card { background: #0d1117; border-radius: 8px; padding: 16px 20px; flex: 1; min-width: 120px; text-align: center; }
+.summary-card .label { font-size: 11px; color: #888; }
+.summary-card .value { font-size: 22px; font-weight: 700; margin-top: 6px; }
+.market-row { display: flex; gap: 12px; flex-wrap: wrap; }
+.market-item { background: #0d1117; border-radius: 6px; padding: 10px 16px; display: flex; gap: 12px; align-items: center; }
+.market-item .market-name { color: #888; font-size: 12px; }
+.market-item .market-price { font-size: 16px; font-weight: 600; }
+.grid-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.grid-table th { text-align: left; padding: 10px 8px; border-bottom: 2px solid #30363d; color: #888; font-weight: 500; font-size: 11px; }
+.grid-table td { padding: 8px; border-bottom: 1px solid #21262d; }
+.grid-table tr:hover td { background: rgba(255,255,255,0.03); }
+.grid-table a { color: #58a6ff; text-decoration: none; }
+.grid-table a:hover { text-decoration: underline; }
+.up { color: #f85149; } .down { color: #3fb950; }
+.buy {} .sell { background: rgba(248,81,73,0.05); }
+.score-0 { color: #888; } .score-1 { color: #58a6ff; } .score-2 { color: #d29922; }
+.score-3 { color: #f85149; } .score-4 { color: #e94560; font-weight: 700; } .score-5 { color: #ff6b6b; font-weight: 700; }
+.tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; }
+.tag-buy { background: rgba(63,185,80,0.15); color: #3fb950; }
+.tag-sell { background: rgba(248,81,73,0.15); color: #f85149; }
+.footer { text-align: center; padding: 30px; color: #555; font-size: 12px; }
+@media (max-width: 768px) {
+    .summary-grid { flex-direction: column; }
+    .grid-table { font-size: 12px; }
+    .grid-table th, .grid-table td { padding: 6px 4px; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="header">
+  <a href="/" style="color:#58a6ff;text-decoration:none;font-size:14px;">← 返回首页</a>
+  <a href="/strategies/" style="color:#58a6ff;text-decoration:none;font-size:14px;margin-left:16px;">⚔️ 战法持仓</a>
+  <h1>📡 60分钟K线扫描</h1>
+  <div class="subtitle">JYFG波段引擎 v3.0 · 最后更新: 2026-07-18 03:15:46</div>
+</div>
+
+<!-- 摘要 -->
+<div class="section">
+    <h2>📊 扫描摘要</h2>
+    <div class="summary-grid">
+        <div class="summary-card"><div class="label">总资产</div><div class="value">¥+135,279.95</div></div>
+        <div class="summary-card"><div class="label">可用资金</div><div class="value">¥+135,279.95</div></div>
+        <div class="summary-card"><div class="label">持仓市值</div><div class="value">¥+0.00</div></div>
+        <div class="summary-card"><div class="label">买入信号</div><div class="value" style="color:#3fb950">0</div></div>
+        <div class="summary-card"><div class="label">买入成交</div><div class="value" style="color:#3fb950">3</div></div>
+        <div class="summary-card"><div class="label">卖出/止损</div><div class="value" style="color:#f85149">1</div></div>
+    </div>
+    <div class="market-row" style="margin-top:16px;">
+        
+    </div>
+</div>
+
+<!-- 大盘行情 -->
+<div class="section">
+    <h2>📈 大盘行情</h2>
+    <div class="market-row">
+        <span style="color:#888">暂无数据</span>
+    </div>
+</div>
+
+<!-- 持仓快照 -->
+<div class="section">
+    <h2>💼 当前持仓 (0只)</h2>
+    <table class="grid-table">
+        <thead><tr><th>股票</th><th>数量</th><th>成本</th><th>市值</th><th>浮动盈亏</th></tr></thead>
+        <tbody><tr><td colspan="5" style="text-align:center;color:#555;">暂无持仓</td></tr></tbody>
+    </table>
+</div>
+
+<!-- 买入信号 -->
+<div class="section">
+    <h2>🟢 买入信号 (0个)</h2>
+    <table class="grid-table">
+        <thead><tr><th>股票</th><th>信号时间</th><th>类型</th><th>价格</th><th>涨幅</th><th>评分</th><th>EMA13</th><th>EMA34</th><th>RSI</th><th>止损</th></tr></thead>
+        <tbody><tr><td colspan="10" style="text-align:center;color:#555;">无买入信号</td></tr></tbody>
+    </table>
+</div>
+
+<!-- 交易记录 -->
+<div class="section">
+    <h2>📋 交易记录 (4笔)</h2>
+    <table class="grid-table">
+        <thead><tr><th>操作</th><th>股票</th><th>价格</th><th>数量</th><th>金额</th><th>状态</th><th>备注</th></tr></thead>
+        <tbody>
+            <tr class="buy">
+                <td>🟢 买入</td>
+                <td><a href="https://stockpage.10jqka.com.cn/300164/" target="_blank">通源石油</a></td>
+                <td>10.48</td>
+                <td>1200</td>
+                <td>¥+12,576.00</td>
+                <td>成交</td>
+                <td><small></small></td>
+            </tr>
+            <tr class="buy">
+                <td>🟢 买入</td>
+                <td><a href="https://stockpage.10jqka.com.cn/002760/" target="_blank">凤形股份</a></td>
+                <td>16.95</td>
+                <td>600</td>
+                <td>¥+10,170.00</td>
+                <td>成交</td>
+                <td><small></small></td>
+            </tr>
+            <tr class="buy">
+                <td>🟢 买入</td>
+                <td><a href="https://stockpage.10jqka.com.cn/001206/" target="_blank">依依股份</a></td>
+                <td>22.33</td>
+                <td>500</td>
+                <td>¥+11,165.00</td>
+                <td>成交</td>
+                <td><small></small></td>
+            </tr>
+            <tr class="sell">
+                <td>🔴 止损</td>
+                <td><a href="https://stockpage.10jqka.com.cn/002739/" target="_blank">儒意电影</a></td>
+                <td>10.08</td>
+                <td>1200</td>
+                <td>¥+12,096.00</td>
+                <td>成交</td>
+                <td><small>跌破动态止损10.22</small></td>
+            </tr></tbody>
+    </table>
+</div>
+
+<!-- 历史扫描 -->
+<div class="section">
+    <h2>📜 最近扫描记录</h2>
+    <table class="grid-table">
+        <thead><tr><th>时间</th><th>扫描</th><th>信号</th><th>交易</th></tr></thead>
+        <tbody>
+            <tr>
+                <td>2026-07-18 03:15</td>
+                <td>0</td>
+                <td>0</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>2026-07-17 14:50</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2026-07-17 13:58</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2026-07-17 11:28</td>
+                <td>0</td>
+                <td>0</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>2026-07-17 10:30</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+            </tr></tbody>
+    </table>
+</div>
+
+</div>
+
+<div class="footer">
+  <p>由 🦞 麻辣小龙虾 JYFG波段引擎 自动生成 | 数据来源: 同花顺</p>
+  <p>投资有风险，入市需谨慎。本页面仅供参考，不构成投资建议。</p>
+</div>
+</body>
+</html>
